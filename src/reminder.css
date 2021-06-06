@@ -1,0 +1,190 @@
+
+.container {
+    max-width: 500px;
+    margin: auto;
+}
+
+.width-100 {
+    width: 100%;
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+.outline-none, .outline-none:active, .outline-none:hover, .outline-none:focus {
+    outline: none;
+}
+
+.no-resize{
+    resize: none;
+}
+
+.padding-row-default {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.padding-default {
+    padding: 15px;
+}
+
+.padding-row-small {
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.border-none {
+    border: none;
+}
+
+.font-24 {
+    font-size: 24px;
+}
+
+.font-20 {
+    font-size: 20px;
+}
+
+.margin-bottom-small {
+    margin-bottom: 8px;
+}
+
+.margin-right-default {
+    margin-right: 15px;
+}
+
+.margin-left-default {
+    margin-left: 15px;
+}
+
+.display-flex {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+.justify-flex-end {
+    justify-content: flex-end;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.justify-space-around {
+    justify-content: space-around;
+}
+
+.relative {
+    position: relative;
+}
+
+.check-mark {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.border-light-grey {
+    border: 1px solid lightgray;
+}
+
+.border-radius-normal {
+    border-radius: 5px;
+}
+
+.bottom-sheet {
+    position: fixed;
+    bottom: 0;
+    background: white;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    box-shadow: 12px 12px 16px 0 rgb(0 0 0 / 25%), -1px 2px 12px 0 rgb(0 0 0 / 30%);
+    width: 100%;
+    max-width: 500px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    margin-right: -15px;
+}
+
+.bottom-save-button {
+    position: fixed;
+    bottom: 70px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    border: 5px solid white;
+    border-radius: 50%;
+}
+
+.save-btn {
+    display: inline-block;
+    border-radius: 50%;
+    background: white;
+    line-height: 0;
+    box-shadow: 12px 12px 16px 0 rgb(0 0 0 / 25%), 0px 0px 10px 0 rgb(0 0 0 / 30%);
+    padding: 15px;
+}
+
+.height-100vh {
+    height: calc(100vh - 30px);
+}
+
+.background-transparent {
+    background: transparent;
+}
+
+.date-picker {
+    box-shadow: 0 0 3px rgb(0 0 0 / 25%);
+    border-radius: 10px;
+}
+
+.reminder-card {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    box-shadow: 0 0 3px rgba(0,0,0,0.25);
+    margin: 15px;
+    word-wrap: break-word;
+}
+
+.reminder-date {
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    align-self: flex-start;
+}
+
+.border-grey {
+    border: 1px solid grey;
+}
+
+.create-btn {
+    background: white;
+    padding: 12px;
+    position: fixed;
+    bottom: 17px;
+    border-radius: 50%;
+    line-height: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    border: 2px solid rgba(145, 151, 163, 0.2);
+    box-shadow: 0px 3px 34px rgb(0 0 0 / 25%);
+}
+
+@media only screen and (max-width: 767px) {
+    .font-22-xs {
+        font-size: 22px;
+    }
+    .bottom-sheet {
+        margin-left: -15px;
+    }
+}
+
+.react-datepicker__input-container {
+    display: flex !important;
+}
