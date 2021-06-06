@@ -1,3 +1,10 @@
+if (!('serviceWorker'in navigator)) {
+    alert('You need a browser that supports service workers for this demo to work.');
+}
+if (!('showTrigger'in Notification.prototype)) {
+    alert('You need a browser with Notification Triggers support for this demo to work.');
+}
+
 if('serviceWorker' in navigator) {
     window.addEventListener('load', function() {
         navigator.serviceWorker.register("/serviceWorker.js").then(function(reg) { 
@@ -14,6 +21,9 @@ Notification.requestPermission(function(status) {
 });
 
 function displayNotification({detail}) {
+    if (!('showTrigger'in Notification.prototype)) {
+        return alert('You need a browser with Notification Triggers support for this demo to work.');
+    }
     if (Notification.permission == 'granted') {
       navigator.serviceWorker.getRegistration().then(function(reg) {
         var options = {
