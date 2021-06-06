@@ -1,7 +1,45 @@
 
 # Live Demo
 
-Deployed on netlify [Reminder Web App](https://reminder-web-app.netlify.app/).
+## Deployed on netlify [Reminder Web App](https://reminder-web-app.netlify.app/).
+
+#
+#
+#
+#
+#
+# How to use notification triggers #
+
+## Enabling via about://flags #
+
+To experiment with the Notification Triggers API locally, without an origin trial token, enable the `#enable-experimental-web-platform-features` flag in `about://flags`.
+
+
+
+
+
+
+
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+
+
+
 
 # Getting Started with Create React App
 
