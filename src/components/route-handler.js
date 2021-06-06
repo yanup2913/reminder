@@ -1,5 +1,5 @@
 import React from "react";
-import {StaticRouter, BrowserRouter, Route, Switch, NavLink} from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Reminders from "./reminders/reminders";
 import CreateReminder from "./create-reminder/create-reminder";
 import { positions, Provider, transitions } from "react-alert";
