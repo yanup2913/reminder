@@ -2,12 +2,12 @@ self.addEventListener('install', function(e) {
     e.waitUntil(
       caches.open('reminders').then(function(cache) {
         return cache.addAll([
-          '/static/css/*',
+          '/static/css/',
           '/common.js',
-          '/static/js/*',
-          '/favicon.ico',
-          '/manifest.json',
-          '/static/media/*'
+          '/static/js/',
+          'favicon.ico',
+          'manifest.json',
+          '/static/media/'
         ]);
       })
     );
