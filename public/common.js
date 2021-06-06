@@ -34,6 +34,11 @@ function displayNotification({detail}) {
       }).catch((err) => {
         console.log("something went wrong whike registration", err);
       });
+    } else {
+        console.log("permission not granted");
+        Notification.requestPermission(function(status) {
+            console.log('Notification permission status:', status);
+        });
     }
   }
 
