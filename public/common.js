@@ -28,7 +28,11 @@ function displayNotification({detail}) {
         };
         reg.showNotification(detail.title, options).then(() => {
             detail.callback();
+        }).catch((err) => {
+            console.log("something went wrong", err);
         });
+      }).catch((err) => {
+        console.log("something went wrong whike registration", err);
       });
     }
   }

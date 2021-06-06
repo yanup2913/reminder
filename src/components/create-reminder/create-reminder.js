@@ -1,5 +1,5 @@
 import TextareaAutosize from "react-textarea-autosize";
-import React, {useState} from "react";
+import React, {useState, useRef} from "react";
 import Header from "./header";
 import BottomColorSheet from "./color-sheet";
 import DatePicker from "react-datepicker";
@@ -31,6 +31,8 @@ export default function CreateReminder() {
   const [remindDate, setRemindDate] = useState(new Date());
   
   const [reminderColor, setReminderColor] = useState(DEFAULT_COLOR);
+
+  const isLoading = useRef(false);
 
   const alert = useAlert()
 
@@ -71,7 +73,8 @@ export default function CreateReminder() {
   };
 
   const onSubmit = () => {
-    if(validateResponse()) {
+    if(validateResponse() && !isLoading.current) {
+      isLoading.current = true;
       const storedReminders = JSON.parse(localStorage.getItem(DB_KEY)) || [];
       const createdReminder = {title, description, remindDate, id: uniqid(), reminderColor};
       console.log({createdReminder});
@@ -80,10 +83,13 @@ export default function CreateReminder() {
       localStorage.setItem(DB_KEY, JSON.stringify(storedReminders));
 
       const callback = () => {
+        isLoading.current = false;
         window.location.href="/";
       }
       const event = new CustomEvent('schedule_notification', { detail: {...createdReminder, callback} });
       window.dispatchEvent(event);
+    } else if(isLoading.current) {
+      alert.show("Wait till the process complete");
     }
   }
 
